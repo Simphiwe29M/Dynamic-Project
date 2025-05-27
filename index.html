@@ -10,7 +10,7 @@
 <body>
   <div class="top-bar">
     <div><i class="fas fa-map-marker-alt"></i> NO 7560, MIKE DIRADINGWE, EXT 9, ROOSEVELT<br> ALEXANDRA TOWNSHIP JOHANNESBURG 2090</div>
-    <marquee behavior="scroll" direction="left">DYNAMIC PROJECTS OF HOPE- Lighting the path to a better future.</marquee>
+    <marquee behavior="scroll" direction="left">DYNAMIC PROJECTS OF HOPE- Lighting path to a better future.</marquee>
     <div>
       <div><i class="fas fa-envelope"></i> <a href="mailto:hopeprojects.dyn@gmail.com">hopeprojects.dyn@gmail.com</a></div>
       <div><i class="fas fa-phone-alt"></i> <a href="tel:+27106342121">010634 2121</a></div>
@@ -109,7 +109,7 @@
                   Social Responsibility – Encouraging volunteerism and fostering collaboration with 
                   government, businesses, and NGOs to drive collective social change.</p>
                 </div>
-     
+      
             </div>
 
         <div class="slider-controls">
@@ -175,26 +175,7 @@
  Operations & Project Management Team – Implements efficient management 
  strategies to drive the success and expansion of programs. 
  Together, these teams work with passion and commitment to transform lives, restore 
- dignity, and build a brighter future for communities across South Africa.</p>   
-   
-   <h3>CODE OF CONDUCT  </h3>
-            <p> At Dynamic Projects of Hope, our core values guide our actions and decisions, ensuring we 
-operate with purpose and integrity: 
-Integrity, Accountability, and Transparency – Upholding the highest ethical 
-standards in all operations, fostering trust with stakeholders and the communities we serve. 
-Excellence in Service Delivery – Striving for outstanding quality in our programs, 
-focusing on measurable community impact and positive outcomes. 
-Adherence to Ethical Standards – Respecting all stakeholders, including participants, 
-partners, and communities, while maintaining ethical practices in every endeavour. 
-Collaboration – Working in partnership with like-minded organizations to maximize 
-outreach and create synergies that enhance our collective impact. 
-Commitment to Continuous Learning and Improvement – Embracing innovation, 
-feedback, and best practices to refine our programs and ensure we meet the evolving needs 
-of our communities. 
-Inclusivity and Non-Discrimination – We embrace diversity and do not discriminate 
-based on race, gender, religion, sexual orientation, or any other status. Our programs are 
-designed to be accessible and equitable for all individuals, fostering an inclusive 
-environment that celebrates differences..</p>
+ dignity, and build a brighter future for communities across South Africa.</p>            
           </div>
 </div>
         </div>
@@ -212,25 +193,21 @@ environment that celebrates differences..</p>
         <li><strong>Transparency and Accountability:</strong> We are committed to transparency and ensure that every donation is utilized effectively to maximize its impact.</li>
       </ul>
       <h3>How to Donate</h3>
-      <p>Your support can help change lives and uplift communities.
-
-To contribute to the work of Dynamic Projects of Hope NPC, please use the banking details below:</p>
+      <p>You can make a secure donation through a direct bank transfer:</p>
       <p>
         Bank Name:  Capitec Business<br>
         Account Name:  DYNAMIC PROJECTS OF HOPE NPC<br>
         Account Number: 1053589840<br>
         Account Type:  Capitec Business Account<br>
       </p>
-      <p>We accept donations of any amount. Every contribution, no matter the amount, helps us make a meaningful impact where it’s needed most.</p>
-
-        <p> Thank you for your generosity</p>
+      <p>We accept any form of donation, Every contribution, no matter the size, makes a difference.</p>
     </section>
 
     <section id="gallery-section" class="content-section">
       <h2 class="gallery-title">Our Gallery</h2>
       <div class="gallery-container">
         <div class="gallery-item">
- <img src="image/" alt="Image 1">
+ <img src="image/IMG-20250522-WA0007.jpg" alt="Image 1">
         </div>
         <div class="gallery-item">
  <img src="image/IMG-20250522-WA0008.jpg" alt="Image 2">
@@ -245,7 +222,7 @@ To contribute to the work of Dynamic Projects of Hope NPC, please use the bankin
  <img src="image/IMG-20250522-WA0007.jpg" alt="Image 5">
         </div>
         <div class="gallery-item">
- <img src=".jpg" alt="Image 6">
+ <img src="image/IMG-20250522-WA0008.jpg" alt="Image 6">
         </div>
       </div>
       
@@ -266,7 +243,7 @@ To contribute to the work of Dynamic Projects of Hope NPC, please use the bankin
         </div>
         <div class="contact-form">
           <h3>Send Us a Message</h3>
-          <form action="send_email.php" method="POST">
+          <form action="#" method="POST">
             <div class="form-group">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required>
@@ -289,21 +266,10 @@ To contribute to the work of Dynamic Projects of Hope NPC, please use the bankin
     </section>
   </main>
 
-  <section class="our-partners">
-    <h2>Our Partners</h2>
-    <div class="partner-images">
-      <div class="partner-image">
-        <img src="image/uj.jpg" alt="Partner 1">
-      </div>
-      <div class="partner-image">
-        <img src="image/pj.jpg" alt="Partner 2">
-      </div>
-    </div>
-  </section>
   <footer>
     <div class="footer-content">
-      <p style="text-align: center; font-weight: bold; color: #007bff;"> DYNAMIC PROJECTS HOPES</p>
-      <p style="text-align: center; font-size: smaller;">LIGHTING PATH TO BE BETTER FUTURE</p>
+      <p style="text-align: center; font-weight: bold; color: #007bff;">LIGHTING PATH TO BE BETTER FUTURE</p>
+      <p style="text-align: center; font-size: smaller;">The children in our programs are dedicated to enhancing their academic achievements and striving to fulfill their aspirations.</p>
       <div class="footer-bottom" style="font-size: smaller;">
         <img src="image/logo.png" alt="Dynamic Projects of Hope Logo" width="150px" height="150px" style="margin-right: 20px;">
         <div class="footer-info">
@@ -439,9 +405,7 @@ To contribute to the work of Dynamic Projects of Hope NPC, please use the bankin
 
       if (readMoreBtn && moreAboutUsContent) {
         readMoreBtn.addEventListener('click', () => {
-          // Check the computed style for accurate display state
-          const computedDisplay = window.getComputedStyle(moreAboutUsContent).display;
-          if (computedDisplay === 'none' || computedDisplay === '') {
+          if (moreAboutUsContent.style.display === 'none' || moreAboutUsContent.style.display === '') {
             moreAboutUsContent.style.display = 'block';
             readMoreBtn.textContent = 'Read Less';
           } else {

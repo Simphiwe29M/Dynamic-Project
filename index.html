@@ -193,14 +193,18 @@
         <li><strong>Transparency and Accountability:</strong> We are committed to transparency and ensure that every donation is utilized effectively to maximize its impact.</li>
       </ul>
       <h3>How to Donate</h3>
-      <p>You can make a secure donation through a direct bank transfer:</p>
+      <p>Your support can help change lives and uplift communities.
+
+To contribute to the work of Dynamic Projects of Hope NPC, please use the banking details below:</p>
       <p>
         Bank Name:  Capitec Business<br>
         Account Name:  DYNAMIC PROJECTS OF HOPE NPC<br>
         Account Number: 1053589840<br>
         Account Type:  Capitec Business Account<br>
       </p>
-      <p>We accept any form of donation, Every contribution, no matter the size, makes a difference.</p>
+      <p>We accept donations of any amount. Every contribution, no matter the amount, helps us make a meaningful impact where it’s needed most.</p>
+
+        <p> Thank you for your generosity</p>
     </section>
 
     <section id="gallery-section" class="content-section">
@@ -243,7 +247,7 @@
         </div>
         <div class="contact-form">
           <h3>Send Us a Message</h3>
-          <form action="#" method="POST">
+          <form action="send_email.php" method="POST">
             <div class="form-group">
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required>
@@ -266,6 +270,17 @@
     </section>
   </main>
 
+  <section class="our-partners">
+    <h2>Our Partners</h2>
+    <div class="partner-images">
+      <div class="partner-image">
+        <img src="image/uj.jpg" alt="Partner 1">
+      </div>
+      <div class="partner-image">
+        <img src="image/pj.jpg" alt="Partner 2">
+      </div>
+    </div>
+  </section>
   <footer>
     <div class="footer-content">
       <p style="text-align: center; font-weight: bold; color: #007bff;">LIGHTING PATH TO BE BETTER FUTURE</p>
@@ -405,7 +420,9 @@
 
       if (readMoreBtn && moreAboutUsContent) {
         readMoreBtn.addEventListener('click', () => {
-          if (moreAboutUsContent.style.display === 'none' || moreAboutUsContent.style.display === '') {
+          // Check the computed style for accurate display state
+          const computedDisplay = window.getComputedStyle(moreAboutUsContent).display;
+          if (computedDisplay === 'none' || computedDisplay === '') {
             moreAboutUsContent.style.display = 'block';
             readMoreBtn.textContent = 'Read Less';
           } else {

@@ -457,6 +457,37 @@ body {
     border: 0;
   }
   
+  /* Our Partners Section Styling */
+  .partner-section {
+    text-align: center; /* Center the content */
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Light background */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .partner-images-container {
+    display: flex; /* Use flexbox for horizontal arrangement */
+    flex-direction: row; /* Ensure flex direction is row for horizontal layout */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Align items vertically in the middle */
+    gap: 30px; /* Space between images */
+    flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+ margin-top: 20px;
+  }
+  
+
+  .partner-section h2 {
+    color: #1a73e8;
+  }
+
+  .partner-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensures the image covers the area */
+  }
+
   /* Footer Styling */
   footer {
     background-color: #343a40; /* Dark background */
@@ -605,4 +636,3 @@ body {
       margin: 10px;
     }
   }
-

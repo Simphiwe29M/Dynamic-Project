@@ -478,15 +478,48 @@ body {
   }
   
 
-  .partner-section h2 {
-    color: #1a73e8;
-  }
+/* Partner Section Styles */
+.our-partners {
+text-align: center;
+padding: 40px 20px;
+background-color: #f8f9fa;
+margin-top: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .partner-image img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover; /* Ensures the image covers the area */
-  }
+.our-partners h2 {
+color: #1a73e8;
+font-size: 2.2em;
+margin-bottom: 30px;
+}
+
+.partner-images {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+}
+
+.partner-image {
+flex: 0 0 auto; /* Do not grow or shrink, base on content */
+width: 150px; /* Set a fixed width for partner logos */
+height: 100px; /* Set a fixed height */
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden; /* Hide overflowing parts of the image */
+}
+
+.partner-image img {
+max-width: 90%; /* Ensure image fits within its container */
+max-height: 90%; /* Ensure image fits within its container */
+object-fit: contain; /* Scale down the image to fit */
+}
+
 
   /* Footer Styling */
   footer {

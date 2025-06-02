@@ -154,7 +154,14 @@ body {
     to {
       opacity: 1;
     }
-  }  
+      .video-container {
+ width: 600px;
+ height: 90;
+ display: block;
+ margin: auto;
+}
+
+ 
 
   /* Slider Controls Styling */
   .slider-controls {

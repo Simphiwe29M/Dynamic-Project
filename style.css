@@ -131,63 +131,200 @@ body {
     font-size: 2.5em;
   }
   
-  /* Slider Styling (from index.html) */
-  .slider-container {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slide {
-    display: none; /* Hidden by default */
-    width: 100%;
-    animation: fadeIn 0.5s ease-in-out;
-  }
-  
-  .slide.active {
-    display: block;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }  
+ /* Slider Styling (from index.html) */
+.slider-container {
+  overflow: hidden;
+  position: relative;
+}
 
-  /* Slider Controls Styling */
-  .slider-controls {
-    text-align: center;
-    margin-top: 20px;
+.slide {
+  display: none; /* Hidden by default */
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .slider-controls button {
-    position: absolute; /* Position relative to the slider container */
- top: 50%; /* Align to the middle vertically */
- transform: translateY(-50%); /* Adjust position for perfect vertical centering */
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styling for the main slider container to enable absolute positioning of controls */
+.slider-controls {
+ position: relative; /* Crucial for positioning the buttons absolutely within it */
+ /* You might need to adjust the width/height of your slider-container
+    to ensure the buttons are positioned correctly relative to the content.
+    For example, if your content is centered and not full width,
+    you might want to set a max-width and margin: auto; on slider-container. */
+}
+.slider-controls button {
+ overflow: hidden; /* Ensures content doesn't spill out */
+ min-height: 300px; /* Example: Ensure there's enough height for vertical centering */
+ display: flex; /* Use flexbox to manage slides */
+ align-items: center; /* Vertically center slides if they have varying heights */
+ justify-content: center; /* Horizontally center slides */
+}
+
+/* General button styling for the slider controls */
+/* The previous .slider-controls class is removed as buttons are now directly inside .slider-container */
+.slider-control-btn {
+ position: absolute; /* Position buttons relative to .slider-container */
+ top: 50%; /* Align top edge to the vertical middle */
+ transform: translateY(-50%); /* Shift up by half its height to truly center */
+
+ /* Basic sizing and typography for the button itself */
+ font-size: 2.5rem; /* Make the icon very big */
+ padding: 20px 25px; /* Generous padding for a large clickable area */
+ border: none; /* Remove default border */
+ border-radius: 10px; /* Rounded corners, adjust as needed */
+ cursor: pointer; /* Indicate it's clickable */
+ outline: none; /* Remove outline on focus */
+ white-space: nowrap; /* Prevent text wrapping if any */
+
+}
+
+.slider-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+#prevBtn {
+/* Unique background gradient */
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+  color: #ffffff; /* White text color */
+
+/* Advanced shadow for depth and pop */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* Larger, softer shadow */
+                0 6px 6px rgba(0, 0, 0, 0.2); /* Smaller, sharper shadow */
+
+/* Text shadow for readability and style */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);\
+
+/* Smooth transition for hover effects */
+  transition: all 0.3s ease-in-out;\
+
+/* Ensure button text is centered */
+  text-align: center;\
+  display: inline-flex; /* Use flex to center icon/text if added */\
+  align-items: center;\
+  justify-content: center;
+}
+
+/* Hover effects */
+.slider-controls button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f80); /* Darker gradient on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), /* Deeper shadow on hover */
+                0 8px 8px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px) scale(1.02); /* Lift and slightly enlarge on hover */
+  color: #f0f0f0; /* Slightly off-white text on hover */
+}
+
+/* Active/Clicked state */
+.slider-controls button:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2),
+                0 3px 3px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #003f80, #002a50); /* Even darker gradient */
+}
+#prevBtn {
+/* Unique background gradient */
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+  color: #ffffff; /* White text color */
+
+/* Advanced shadow for depth and pop */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* Larger, softer shadow */
+                0 6px 6px rgba(0, 0, 0, 0.2); /* Smaller, sharper shadow */
+
+/* Text shadow for readability and style */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);\
+
+/* Smooth transition for hover effects */
+  transition: all 0.3s ease-in-out;\
+
+/* Ensure button text is centered */
+  text-align: center;\
+  display: inline-flex; /* Use flex to center icon/text if added */\
+  align-items: center;\
+  justify-content: center;\
+}
+
+/* Hover effects */
+.slider-controls button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f80); /* Darker gradient on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), /* Deeper shadow on hover */
+                0 8px 8px rgba(0, 0, 0, 0.3);\
+  transform: translateY(-3px) scale(1.02); /* Lift and slightly enlarge on hover */
+  color: #f0f0f0; /* Slightly off-white text on hover */
+}
+
+/* Active/Clicked state */
+.slider-controls button:active {
+  transform: translateY(0); /* Press down effect */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2),\
+                0 3px 3px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #003f80, #002a50); /* Even darker gradient */
+}
+/* Positioning for the 'Previous' button */
+#prevBtn {
+    left: 10px; /* Position from the left edge */
+    /* Add z-index if buttons are hidden by slider content */
     z-index: 10;
-    padding: 10px; /* Add padding around the icons */
-    cursor: pointer; /* Change cursor on hover */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 5px;
- font-size: 1.5em;
- margin: 0 10px;
+}
+#nextBtn {
+  /* Unique background gradient */
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+    color: #ffffff; /* White text color */
+
+  /* Advanced shadow for depth and pop */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), /* Larger, softer shadow */
+                  0 6px 6px rgba(0, 0, 0, 0.2); /* Smaller, sharper shadow */
+
+  /* Text shadow for readability and style */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+
+  /* Smooth transition for hover effects */
+    transition: all 0.3s ease-in-out;
+
+  /* Ensure button text is centered */
+    text-align: center;
+    display: inline-flex; /* Use flex to center icon/text if added */
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Hover effects */
   .slider-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+    background: linear-gradient(135deg, #0056b3, #003f80); /* Darker gradient on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), /* Deeper shadow on hover */
+                  0 8px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px) scale(1.02); /* Lift and slightly enlarge on hover */
+    color: #f0f0f0; /* Slightly off-white text on hover */
   }
-  
-  #prevBtn {
- left: 10px;
+
+  /* Active/Clicked state */
+  .slider-controls button:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2),
+                  0 3px 3px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #003f80, #002a50); /* Even darker gradient */
   }
-  
-  #nextBtn {
- right: 10px;
-  }
+/* Positioning for the 'Next' button */
+#nextBtn {
+ right: 10px; /* Position from the right edge */
+    /* Add z-index if buttons are hidden by slider content */
+    z-index: 10;
+}
+#nextBtn {
+
+}
+
+/* ... rest of the CSS file ... */
   
   /* About Us Section Styling (from about.css) */
   .about-us {

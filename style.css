@@ -166,7 +166,7 @@ body {
 }
 .slider-controls button {
  overflow: hidden; /* Ensures content doesn't spill out */
- min-height: 300px; /* Example: Ensure there's enough height for vertical centering */
+ min-height: 100px; /* Example: Ensure there's enough height for vertical centering */
  display: flex; /* Use flexbox to manage slides */
  align-items: center; /* Vertically center slides if they have varying heights */
  justify-content: center; /* Horizontally center slides */
@@ -324,7 +324,6 @@ body {
 
 }
 
-/* ... rest of the CSS file ... */
   
   /* About Us Section Styling (from about.css) */
   .about-us {

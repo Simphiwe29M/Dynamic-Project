@@ -12,7 +12,7 @@ body {
 /* Top Bar Styling */
 .top-bar {
   background-image: url('image/backs.jpg'); /* Consistent Orange color */
-  color: black; /* White text */ /* Set the background image */
+  color: #ffffff; /* White text */ /* Set the background image */
   padding: 5px 20px; /* Adjusted padding */
   font-size: 0.9em; /* Font size */
   display: flex;
@@ -31,7 +31,7 @@ body {
 }
 
 .top-bar a {
-  color: #070707; /* White link color */
+  color: #ffffff; /* White link color */
   text-decoration: none;
 }
 .navbar {
@@ -88,7 +88,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: rgb(0, 0, 0); /* Slightly lighter link color */
+  color: #ffffff; /* Slightly lighter link color */
   font-weight: bold;
   padding: 20px; /* Added 20px padding */
   font-size: 1.1em; /* Slightly larger font */

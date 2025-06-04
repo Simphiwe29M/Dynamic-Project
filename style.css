@@ -3,8 +3,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   line-height: 1.6;
-  color: url('image/back.jpg');
-  background-color: #f0f2f5;
+  color: #333; /* Set a default text color */
+  background-image: url('image/ground.jpg');
   max-width: 1200px; /* Set a maximum width for the content */
   margin: 0 auto; /* Center the body horizontally */
 }
@@ -12,7 +12,7 @@ body {
 /* Top Bar Styling */
 .top-bar {
   background-image: url('image/back.jpg'); /* Consistent Orange color */
-  color: black; /* White text */
+  color: black; /* White text */ /* Set the background image */
   padding: 5px 20px; /* Adjusted padding */
   font-size: 0.9em; /* Font size */
   display: flex;
@@ -35,7 +35,7 @@ body {
   text-decoration: none;
 }
 .navbar {
-  background-image: url('../image/back.jpg');
+  background-image:  url('image/back.jpg');
   padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

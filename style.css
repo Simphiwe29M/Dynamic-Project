@@ -4,7 +4,7 @@ body {
   margin: 0;
   line-height: 1.6;
   color: #333; /* Set a default text color */
-  background-image: url('image/ground.jpg');
+  background-image: url('image/logo.png');
   max-width: 1200px; /* Set a maximum width for the content */
   margin: 0 auto; /* Center the body horizontally */
 }

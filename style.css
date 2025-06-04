@@ -3,15 +3,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   line-height: 1.6;
-  color: #333;
-  background-image: url('image/back.jpg');
+  color: url('image/back.jpg');
+  background-color: #f0f2f5;
   max-width: 1200px; /* Set a maximum width for the content */
   margin: 0 auto; /* Center the body horizontally */
 }
 
 /* Top Bar Styling */
 .top-bar {
-  background-color: #f6ba0595; /* Consistent Orange color */
+  background-image: url('image/back.jpg'); /* Consistent Orange color */
   color: #fff; /* White text */
   padding: 5px 20px; /* Adjusted padding */
   font-size: 0.9em; /* Font size */
@@ -34,7 +34,11 @@ body {
   color: #fff; /* White link color */
   text-decoration: none;
 }
-
+.navbar {
+  background-image: url('../image/back.jpg');
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .top-bar marquee {
   flex-grow: 1; /* Allow marquee to take up available space */
   margin: 0 10px; /* Add margin around marquee */
@@ -42,7 +46,10 @@ body {
 
 /* Header Styling */
 header {
-  background-color: #f8f9fa; /* Light background */
+  background-image: url('image/back.jpg'); /* Set the background image */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image */
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
 }
@@ -81,7 +88,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #555; /* Slightly lighter link color */
+  color: green; /* Slightly lighter link color */
   font-weight: bold;
   padding: 20px; /* Added 20px padding */
   font-size: 1.1em; /* Slightly larger font */

@@ -12,7 +12,7 @@ body {
 /* Top Bar Styling */
 .top-bar {
   background-image: url('image/back.jpg'); /* Consistent Orange color */
-  color: #fff; /* White text */
+  color: black; /* White text */
   padding: 5px 20px; /* Adjusted padding */
   font-size: 0.9em; /* Font size */
   display: flex;
@@ -31,7 +31,7 @@ body {
 }
 
 .top-bar a {
-  color: #fff; /* White link color */
+  color: #070707; /* White link color */
   text-decoration: none;
 }
 .navbar {

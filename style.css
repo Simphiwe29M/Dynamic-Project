@@ -54,11 +54,8 @@ header {
   border-bottom: 1px solid #ddd;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+
+
 
 .header-content {
   display: flex; /* Use flexbox */
